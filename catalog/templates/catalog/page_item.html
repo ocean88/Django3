@@ -3,6 +3,8 @@
 {% load my_tags %}
 <h1>{{ object.name }}</h1>
 <p>Стоимость: <br>{{ object.price }}руб.</p>
-<img src="{{ object.image|my_media_filter }}">
+<div class="card-header py-3">
+<img src="{% my_media_tag object.image %}" class ="card-img-top p-2" alt="...">
+</div>
 <p>{{ object.description }}</p>
 {% endblock %}
